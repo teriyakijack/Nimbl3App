@@ -1,0 +1,24 @@
+@mixin icons($name, $normal, $active)
+  .icons-#{$name}
+    background-image: url("/static/icons/#{$normal}")
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    height: 21px
+    width: 21px
+    content: ''
+  .active
+    .icons-#{$name}
+      background-image: url("/static/icons/#{$active}")
+
+@include icons("dashboard", "controls-purple.svg", "controls-white.svg")
+@include icons("cart", "shopping-cart-purple.svg", "shopping-cart-white.svg")
+@include icons("factory", "factory-purple.svg", "factory-white.svg")
+@include icons("box", "box-purple.svg", "box-white.svg")
+@include icons("document", "document-purple.svg", "document-white.svg")
+@include icons("price", "pricing-label-purple.svg", "pricing-label-white.svg")
+@include icons("shape", "shapes-purple.svg", "shapes-white.svg")
+@include icons("gear", "gear-purple.svg", "gear-purple.svg")
+@include icons("chart", "chart-purple.svg", "chart-white.svg")
+@include icons("people", "people-purple.svg", "people-white.svg")
+@include icons("arrow", "arrow-purple.svg", "arrow-white.svg")
